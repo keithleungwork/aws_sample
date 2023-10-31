@@ -1,0 +1,18 @@
+workflow:
+  role: "arn:aws:iam::xxxx"
+  arn: "arn:aws:states:xxxxx"
+steps:
+  training:
+    role: "arn:aws:iam::xxxx"
+    image_uri: "xxxxxxx"
+    instance_count: 1
+    instance_type: "ml.g4dn.4xlarge"
+    max_run: 86400
+    volume_size: 30
+  processing:
+    role: "xxxxxx"
+    image_uri: "xxxxxxxx"
+    instance_count: 1
+    instance_type: "ml.m4.xlarge"
+    max_runtime_in_seconds: 86400
+    volume_size_in_gb: 30
